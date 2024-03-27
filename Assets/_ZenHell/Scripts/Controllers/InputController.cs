@@ -1,21 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace ZenHell
+namespace ZenHell.Controllers
 {
-    public class InputController : MonoBehaviour
+    public class InputController
     {
-        // Start is called before the first frame update
-        void Start()
+        public Vector2 GetMovementDirection()
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            // Replace this with actual input fetching logic
+            return new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
     }
 }

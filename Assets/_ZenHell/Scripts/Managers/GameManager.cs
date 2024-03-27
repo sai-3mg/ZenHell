@@ -1,21 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
+using ZenHell.Controllers;
 
-namespace ZenHell
+namespace ZenHell.Managers
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager
     {
-        // Start is called before the first frame update
-        void Start()
+        private readonly InputController _inputController;
+
+        [Inject]
+        public GameManager(InputController inputController)
         {
-        
+            _inputController = inputController;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void StartGame()
         {
-        
+            // Start game logic here
+            Debug.Log("Game started!");
         }
+
+        public void EndGame()
+        {
+            // End game logic here
+            Debug.Log("Game ended!");
+        }
+
     }
 }

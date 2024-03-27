@@ -1,4 +1,6 @@
 using Zenject;
+using ZenHell.Managers;
+using ZenHell.Controllers;
 
 namespace ZenHell.Installers
 {
@@ -6,7 +8,11 @@ namespace ZenHell.Installers
     {
         public override void InstallBindings()
         {
-            // Dependency bindings will be added here in the future.
+            Container.Bind<GameManager>().AsSingle();
+            Container.Bind<NetworkManager>().AsSingle();
+            Container.Bind<InputController>().AsSingle();
+
+            // If there are any other dependencies needed by these classes, bind them here as well
         }
     }
 

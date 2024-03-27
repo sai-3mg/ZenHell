@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace ZenHell
+namespace ZenHell.Managers
 {
-    public class NetworkManager : MonoBehaviour
+    public class NetworkManager
     {
-        // Start is called before the first frame update
-        void Start()
+        public void CreateRoom()
         {
-        
+            Debug.Log("Room created!");
         }
 
-        // Update is called once per frame
-        void Update()
+        public void JoinRoom()
         {
-        
+            Debug.Log("Joined room!");
         }
     }
 }
